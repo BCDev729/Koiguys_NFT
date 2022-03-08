@@ -38,7 +38,7 @@ export default function ContactSection() {
               <img src={Image1} alt="" className="mx-auto" />
             </div>
             <p className="text-white  max-w-xs mx-auto w-full mt-6 text-center font-medium ">
-              888 KoiGuys with more than 8 million Combinations!
+              1888 KoiGuys with more than 8 million Combinations!
             </p>
           </div>
           <div className="">
@@ -139,8 +139,9 @@ export default function ContactSection() {
             </div>
             <div className=" text-white">
               <p className="text-xs sm:text-base sm:pr-4">
-              We will create 3D versions of ALL 888 Original KoiGuy & 
+              We will create 3D versions of ALL 1888 Original KoiGuy & 
               they will airdropped directly to current token holders.
+              Do presale .06 & public .08 lil incentive to premint.
               </p>
             </div>
           </div>

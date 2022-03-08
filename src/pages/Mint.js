@@ -197,7 +197,7 @@ const Mint = () => {
             </h1>
             <div className="grid gap-6 grid-flow-col">
               <div>
-                <p className="text-sm sm:text-base">Total NFTs are 888</p>
+                <p className="text-sm sm:text-base">Total NFTs are 1888</p>
               </div>
               <div>
                 <p className="text-sm sm:text-base">0.08ETH per NFT</p>

@@ -69,7 +69,7 @@ function TeamSection() {
           <button className="btn-custom">About us</button>
         </div>
         <p className="text-white font-medium text-center max-w-6xl mx-auto mt-6">
-        KoiGuys are Collection of 888 Beautiful Koi swimming on the Eth blockchain,
+        KoiGuys are Collection of 1888 Beautiful Koi swimming on the Eth blockchain,
          randomly generated using more than 150+ characteristics! They are stored safely and 
          securely on the Ethereum blockchain and hosted on OpenSea. KoiGuys will be sold for 
          .08 ETH each! Stake your Koi for utility token $KOIFISH, for future drops, 

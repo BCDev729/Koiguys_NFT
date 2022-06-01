@@ -663,6 +663,9 @@ video {
 .w-16{
 	width: 4rem;
 }
+.w-1\/2{
+	width: 50%;
+}
 .min-w-0{
 	min-width: 0px;
 }
@@ -726,6 +729,9 @@ video {
 .justify-start{
 	justify-content: flex-start;
 }
+.justify-end{
+	justify-content: flex-end;
+}
 .gap-4{
 	gap: 1rem;
 }
@@ -761,6 +767,9 @@ video {
 }
 .rounded{
 	border-radius: 0.25rem;
+}
+.rounded-2xl{
+	border-radius: 1rem;
 }
 .rounded-tl-3xl{
 	border-top-left-radius: 1.5rem;
@@ -2649,6 +2658,9 @@ video {
 		width: 66.666667%;
 	}
 	.lg\:w-6\/12{
+		width: 50%;
+	}
+	.lg\:w-1\/2{
 		width: 50%;
 	}
 	.lg\:flex-row{

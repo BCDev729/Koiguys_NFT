@@ -6,8 +6,10 @@ import Image4 from "assets/img/001.png";
 import Image5 from "assets/img/000.png";
 import Image6 from "assets/img/077.png";
 import Image7 from "assets/img/092.png";
-import Image8 from "assets/img/095.png";
+import Team1 from "assets/img/team1.png";
+import Team2 from "assets/img/team2.png";
 import TeamCard1 from "components/landing/TeamCard1";
+import LandingTeamCard from './TeamCard';
 // import Icon from "@material-tailwind/react/Icon";
 import { SiDiscord } from "react-icons/si";
 import { FaTwitter } from "react-icons/fa";
@@ -74,8 +76,10 @@ export default function ContactSection() {
         </div>
       </div>
       {/* ROADMAP */}
-      <div className="flex justify-center" id="road">
-        <button className="btn-custom">Road map</button>
+      <div className="container max-w-7xl mx-auto px-4 mb-14 pt-10">
+        <div className="flex justify-center" id="road">
+          <button className="btn-custom">Road map</button>
+        </div>
       </div>
       {/* PHASE1 */}
       <div className="flex flex-wrap mt-12 lg:mt-0 justify-start">
@@ -93,7 +97,7 @@ export default function ContactSection() {
           <div className="h-full flex flex-col justify-center">
             <div className="mr-5 text-white ">
               <p className="text-xl  sm:text-2xl md:text-4xl font-bold">
-                Remove 10% change to: PRE SALES
+                PRE SALES
               </p>
             </div>
             <div className="mr-5 text-white">
@@ -142,7 +146,7 @@ export default function ContactSection() {
               </p>
             </div>
           </div>
-          <div className="lg:hidden flex-shrink-0 roadmap-image">
+          <div className="flex justify-end lg:hidden flex-shrink-0 roadmap-image">
             <img src={Image5} alt="" />
           </div>
         </div>
@@ -212,8 +216,8 @@ export default function ContactSection() {
               </p>
             </div>
           </div>
-          <div className="lg:hidden flex-shrink-0 roadmap-image">
-            <img src={Image7} alt="" />
+          <div className="flex justify-end lg:hidden flex-shrink-0 roadmap-image">
+            <img src={Image7} alt=""/>
           </div>
         </div>
       </div>
@@ -263,12 +267,11 @@ export default function ContactSection() {
       </div>
 
       <div className="lg:flex lg:justify-between mt-10 lg:mt-0">
-        <div className="flex lg:justify-between h-full my-5 lg:my-0" >
+        <div className="flex lg:justify-between h-full my-5 lg:my-0 lg:w-1/2" >
           <div className="hidden lg:block">
-            <TeamCard1
-              img={Image5}
+            <LandingTeamCard
+              img={Team1}
               name="Ryan Tompson"
-              position="Web Developer"
             />
           </div>
           <div
@@ -279,29 +282,28 @@ export default function ContactSection() {
                 "linear-gradient(240deg, rgb(55 13 76), rgb(117 26 164))",
             }}
           >
-            <div className="lg:hidden flex-shrink-0 roadmap-image">
-              <img src={Image5} alt="" />
+            <div className="lg:hidden flex-shrink-0 roadmap-image team">
+              <img src={Team1} alt="" className='rounded-2xl'/>
             </div>
             <div className="text-left h-full  flex flex-col justify-center">
               <div className=" text-white">
                 <p className="text-xl  sm:text-2xl md:text-4xl font-bold sm:ml-5 ml-2">
-                  StonedApe4434
+                  TyFromThe012
                 </p>
               </div>
               <div className=" text-white">
                 <p className="text-xs sm:text-base sm:pr-4 sm:ml-5 ml-2">
-                  Finance, Revenue & Utility Consultant, KoiGuys Co-Founder @KoiGuysNFT
+                  OG Holder Since 5/13 #BAYC #4434 Lifelong Philadelphia Fan! Dilly Dilly!, Co-Founder KoiGuys @StonedApe4434
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex lg:justify-between h-full my-5 lg:my-0">
+        <div className="flex lg:justify-between h-full my-5 lg:my-0 lg:w-1/2" >
           <div className="hidden lg:block">
-            <TeamCard1
-              img={Image8}
+            <LandingTeamCard
+              img={Team2}
               name="Ryan Tompson"
-              position="Web Developer"
             />
           </div>
           <div
@@ -312,8 +314,8 @@ export default function ContactSection() {
                 "linear-gradient(240deg, rgb(55 13 76), rgb(117 26 164))",
             }}
           >
-            <div className="lg:hidden flex-shrink-0 roadmap-image">
-              <img src={Image8} alt="" />
+            <div className="lg:hidden flex-shrink-0 roadmap-image team">
+              <img src={Team2} alt="" className='rounded-2xl'/>
             </div>
             <div className="text-left h-full  flex flex-col justify-center">
               <div className=" text-white">

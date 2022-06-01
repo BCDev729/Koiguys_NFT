@@ -120,3 +120,17 @@ body button:focus {
 .accordion-body {
   background: transparent;
 }
+
+.team {
+  width: 264px;
+  height: 324px;
+  padding: 1rem;
+}
+.team img {
+  height: -webkit-fill-available;
+}
+
+.team-img {
+  height: -webkit-fill-available !important;
+  border-radius: 1rem;
+}

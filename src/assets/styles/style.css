@@ -1,6 +1,6 @@
 .bg-background {
-  background-image: url("/src/assets/img/background-1920x1280.jpg");
-  /* background-image: url("/src/assets/img/banner.gif"); */
+  /* background-image: url("/src/assets/img/background-1920x1280.jpg"); */
+  background-image: url("/src/assets/img/banner.gif");
 }
 @media (max-width: 600px) {
   .bg-background.mint {

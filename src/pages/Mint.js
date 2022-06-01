@@ -138,15 +138,15 @@ const Mint = () => {
       return;
     }
     console.log(process.env.REACT_APP_NETWORK_ID)
-    if (chainId !== parseInt(process.env.REACT_APP_NETWORK_ID)) {
-      toast.error('Please choose the Ethereum network!', {
-        position: "top-right",
-        autoClose: 3000,
-        closeOnClick: true,
-        hideProgressBar: true,
-      });
-      return;
-    }
+    // if (chainId !== parseInt(process.env.REACT_APP_NETWORK_ID)) {
+    //   toast.error('Please choose the Ethereum network!', {
+    //     position: "top-right",
+    //     autoClose: 3000,
+    //     closeOnClick: true,
+    //     hideProgressBar: true,
+    //   });
+    //   return;
+    // }
     console.log("balance:", await signer.getBalance());
     const balance = await signer.getBalance();
     const amount = 0.08 * value;
@@ -165,7 +165,7 @@ const Mint = () => {
     console.log(contract);
     const nftContract = new ethers.Contract(contract.address, contract.abi, signer);
     console.log(nftContract);
-    await nftContract.createToken(value, options);
+    // await nftContract.createToken(value, options);
   }
 
   return (

@@ -5,7 +5,6 @@ export default function LandingTeamCard({ img, name}) {
         <div className="w-full  mb-12">
             <div className="position-relative">
                 <Image src={img} alt={name} raised style={{ width: "200px", height: "200px" }} />
-                
             </div>
         </div>
     );

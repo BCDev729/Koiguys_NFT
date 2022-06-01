@@ -37,7 +37,7 @@ export default function DefaultNavbar() {
         <NavbarCollapse open={openNavbar}>
           <Nav>
             <div className="flex flex-col z-50 lg:flex-row lg:items-center">
-              <Link to="/" className="py-2 px-4 text-white">
+              <Link to="/mint" className="py-2 px-4 text-white">
                 Mint
               </Link>
               <a href="#about" className="py-2 px-4 text-white">

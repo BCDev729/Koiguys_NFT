@@ -46,6 +46,13 @@ export default function DefaultNavbar() {
               <a href="#road" className="py-2 px-4 text-white">
                 RoadMap
               </a>
+              <a href="#team" className="py-2 px-4 text-white">
+                Team
+              </a>
+              <a href="#faq" className="py-2 px-4 text-white">
+                FAQ
+              </a>
+              
               <a
                 href="https://discord.gg/MtudMRc4zd"
                 target="_blank"

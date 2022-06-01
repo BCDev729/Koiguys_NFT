@@ -6,7 +6,7 @@ import Image4 from "assets/img/001.png";
 import Image5 from "assets/img/000.png";
 import Image6 from "assets/img/077.png";
 import Image7 from "assets/img/092.png";
-// import Image8 from "assets/img/095.png";
+import Image8 from "assets/img/095.png";
 import TeamCard1 from "components/landing/TeamCard1";
 // import Icon from "@material-tailwind/react/Icon";
 import { SiDiscord } from "react-icons/si";
@@ -284,12 +284,12 @@ export default function ContactSection() {
             </div>
             <div className="text-left h-full  flex flex-col justify-center">
               <div className=" text-white">
-                <p className="text-xl  sm:text-2xl md:text-4xl font-bold">
-                  KoiKing
+                <p className="text-xl  sm:text-2xl md:text-4xl font-bold sm:ml-5 ml-2">
+                  StonedApe4434
                 </p>
               </div>
               <div className=" text-white">
-                <p className="text-xs sm:text-base sm:pr-4">
+                <p className="text-xs sm:text-base sm:pr-4 sm:ml-5 ml-2">
                   Finance, Revenue & Utility Consultant, KoiGuys Co-Founder @KoiGuysNFT
                 </p>
               </div>
@@ -299,7 +299,7 @@ export default function ContactSection() {
         <div className="flex lg:justify-between h-full my-5 lg:my-0">
           <div className="hidden lg:block">
             <TeamCard1
-              img={Image5}
+              img={Image8}
               name="Ryan Tompson"
               position="Web Developer"
             />
@@ -313,16 +313,16 @@ export default function ContactSection() {
             }}
           >
             <div className="lg:hidden flex-shrink-0 roadmap-image">
-              <img src={Image5} alt="" />
+              <img src={Image8} alt="" />
             </div>
             <div className="text-left h-full  flex flex-col justify-center">
               <div className=" text-white">
-                <p className="text-xl  sm:text-2xl md:text-4xl font-bold">
+                <p className="text-xl  sm:text-2xl md:text-4xl font-bold sm:ml-5 ml-2">
                   KoiKing
                 </p>
               </div>
               <div className=" text-white">
-                <p className="text-xs sm:text-base sm:pr-4">
+                <p className="text-xs sm:text-base sm:pr-4 sm:ml-5 ml-2">
                   Finance, Revenue & Utility Consultant, KoiGuys Co-Founder @KoiGuysNFT
                 </p>
               </div>

@@ -190,7 +190,7 @@ const Mint = () => {
           }
           
         </div>
-        <div className=" mt-40 md:mt-40 flex-col items-start flex justify-center px-4  max-w-7xl mx-auto bg-black bg-opacity-20 py-4 w-11/12 md:bg-transparent  rounded-md">
+        <div className=" mt-40 md:mt-40 flex-col items-start flex justify-center px-4  max-w-7xl mx-auto bg-black-grey bg-opacity-20 py-4 w-11/12 md:bg-transparent  rounded-md">
           <div className="text-white font-bold mx-auto">
             <h1 className="text-2xl font-bold uppercase text-center mb-6">
               Mint
@@ -209,7 +209,7 @@ const Mint = () => {
           </div>
           <div className="mx-auto">
             <div className="flex mt-2 items-center ">
-              <div className="bg-white bg-opacity-20 shadow-2xl  sm:w-80  py-2 rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl mr-2 flex text-white px-4">
+              <div className="bg-white-grey bg-opacity-20 shadow-2xl  sm:w-80  py-2 rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl mr-2 flex text-white px-4">
                 <button onClick={minus}>
                   <i className="fas fa-minus"></i>
                 </button>
@@ -231,19 +231,19 @@ const Mint = () => {
             <div className="mt-3">
               <div className="grid justify-start items-center grid-flow-col gap-8 w-full">
                 <button
-                  className=" bg-white bg-opacity-20 shadow-2xl  rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl w-14 text-white py-1 font-bold"
+                  className=" bg-white-grey bg-opacity-20 shadow-2xl  rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl w-14 text-white py-1 font-bold"
                   onClick={() => setValue(1)}
                 >
                   1
                 </button>
                 <button
-                  className=" bg-white bg-opacity-20 shadow-2xl  rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl w-14 text-white py-1 font-bold"
+                  className=" bg-white-grey bg-opacity-20 shadow-2xl  rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl w-14 text-white py-1 font-bold"
                   onClick={() => setValue(2)}
                 >
                   2
                 </button>
                 <button
-                  className=" bg-white bg-opacity-20 shadow-2xl  rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl w-14 text-white py-1 font-bold"
+                  className=" bg-white-grey bg-opacity-20 shadow-2xl  rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl w-14 text-white py-1 font-bold"
                   onClick={() => setValue(5)}
                 >
                   5

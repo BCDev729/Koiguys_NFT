@@ -190,7 +190,7 @@ const Mint = () => {
           }
           
         </div>
-        <div className=" mt-40 md:mt-40 flex-col items-start flex justify-center px-4  max-w-7xl mx-auto bg-black-grey bg-opacity-20 py-4 w-11/12 md:bg-transparent  rounded-md">
+        <div className=" mt-40 md:mt-40 flex-col items-start flex justify-center px-4  max-w-7xl mx-auto bg-black-grey bg-opacity-20 py-4 w-11/12  rounded-md">
           <div className="text-white font-bold mx-auto">
             <h1 className="text-2xl font-bold uppercase text-center mb-6">
               Mint

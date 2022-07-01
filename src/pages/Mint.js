@@ -76,6 +76,10 @@ const Mint = () => {
       });
       return;
     }
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: '0x1' }],
+   })
     await coinbaseProvider.request({ method: 'eth_requestAccounts' });
     const provider = new ethers.providers.Web3Provider(coinbaseProvider);
     const signer_coinbase = provider.getSigner();
@@ -110,6 +114,10 @@ const Mint = () => {
       });
       return;
     }
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: '0x1' }],
+   })
     await metamaskProvider.request({ method: 'eth_requestAccounts' });
     const provider = new ethers.providers.Web3Provider(metamaskProvider);
     const signer_metamask = provider.getSigner();
@@ -137,15 +145,15 @@ const Mint = () => {
       });
       return;
     }
-    // if (chainId !== parseInt(process.env.REACT_APP_NETWORK_ID)) {
-    //   toast.error('Please choose the Ethereum network!', {
-    //     position: "top-right",
-    //     autoClose: 3000,
-    //     closeOnClick: true,
-    //     hideProgressBar: true,
-    //   });
-    //   return;
-    // }
+    if (chainId !== parseInt(process.env.REACT_APP_NETWORK_ID)) {
+      toast.error('Please choose the Ethereum network!', {
+        position: "top-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        hideProgressBar: true,
+      });
+      return;
+    }
     console.log("balance:", await signer.getBalance());
     const balance = await signer.getBalance();
     const nftContract = new ethers.Contract(contract.address, contract.abi, signer);
@@ -165,15 +173,15 @@ const Mint = () => {
     const options = {value: ethers.utils.parseEther(amount.toString())};
     console.log(parseInt(balance._hex, 16));
     console.log(options,parseInt(options.value._hex, 16));
-    // if (parseInt(balance._hex, 16) - parseInt(options.value._hex, 16) < 0){
-    //   toast.error('Insufficient Fund!', {
-    //     position: "top-right",
-    //     autoClose: 3000,
-    //     closeOnClick: true,
-    //     hideProgressBar: true,
-    //   });
-    //   return;
-    // }
+    if (parseInt(balance._hex, 16) - parseInt(options.value._hex, 16) < 0){
+      toast.error('Insufficient Fund!', {
+        position: "top-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        hideProgressBar: true,
+      });
+      return;
+    }
     
     const whitelistStatus = await nftContract.whitelistStatus();
     let transaction;

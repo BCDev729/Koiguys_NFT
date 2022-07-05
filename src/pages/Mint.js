@@ -55,7 +55,6 @@ const Mint = () => {
         setAvailableWallet('both');
       } 
     }
-    console.log(window.ethereum)
   },[])
 
   const connectCoinbaseWalletHandler = async () => {
@@ -154,7 +153,6 @@ const Mint = () => {
       });
       return;
     }
-    console.log("balance:", await signer.getBalance());
     const balance = await signer.getBalance();
     const nftContract = new ethers.Contract(contract.address, contract.abi, signer);
     let mintStatus = await nftContract.mintStatus();
@@ -171,8 +169,6 @@ const Mint = () => {
     const Mintingfee = parseInt(fee._hex, 16) * Math.pow(10, -18)
     const amount = Mintingfee * value;
     const options = {value: ethers.utils.parseEther(amount.toString())};
-    console.log(parseInt(balance._hex, 16));
-    console.log(options,parseInt(options.value._hex, 16));
     if (parseInt(balance._hex, 16) - parseInt(options.value._hex, 16) < 0){
       toast.error('Insufficient Fund!', {
         position: "top-right",
@@ -186,9 +182,9 @@ const Mint = () => {
     const whitelistStatus = await nftContract.whitelistStatus();
     let transaction;
     if(whitelistStatus){
-      transaction = await nftContract.whitelistMint(amount, options);  
+      transaction = await nftContract.whitelistMint(value, options);  
     }else{
-      transaction = await nftContract.publicMint(amount, options);
+      transaction = await nftContract.publicMint(value, options);
     }
     await transaction.wait();
     toast.success('Successfully Minted!', {

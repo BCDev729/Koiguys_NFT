@@ -7,6 +7,8 @@ import contract from "../components/ABI/KoiGuys.json";
 import WalletModal from "../components/mint/WalletModal";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+
 require('dotenv').config()
 const Mint = () => {
   const [showConnectWallet, setShowConnectWallet] = useState(false);
@@ -180,13 +182,25 @@ const Mint = () => {
     }
     
     const whitelistStatus = await nftContract.whitelistStatus();
-    let transaction;
+    const projectId = '0eef63d6-ba3e-4ab7-b4b1-b499a6073dc2'
+    const userId = '4b2ba283-f29d-4c9d-8246-11411d952d9f'
+    const apiKey = '8FzevywFom11Pg4sDCbW53EJ6lxda5Bk9BY3KNEp'
+    const minterAddress = await signer.getAddress()
     if(whitelistStatus){
-      transaction = await nftContract.whitelistMint(value, options);  
+      const bodyData = { userId: userId, projectId: projectId, minterAddress: minterAddress};
+      const headers = { 
+          'x-api-key': apiKey,
+          'Content-Type': 'application/json',
+      };
+      const proofResponse = await axios.post('https://tbekgm6vq6.execute-api.us-east-1.amazonaws.com/dev/getProof', bodyData, { headers })
+      console.log(proofResponse);
+      const proof = JSON.parse(proofResponse.data.body)
+      const transaction = await nftContract.whitelistMint(proof, value, options);  
+      await transaction.wait();
     }else{
-      transaction = await nftContract.publicMint(value, options);
+      const pub_transaction = await nftContract.publicMint(value, options);
+      await pub_transaction.wait();
     }
-    await transaction.wait();
     toast.success('Successfully Minted!', {
       position: "top-right",
       autoClose: 3000,

@@ -193,10 +193,20 @@ const Mint = () => {
           'Content-Type': 'application/json',
       };
       const proofResponse = await axios.post('https://tbekgm6vq6.execute-api.us-east-1.amazonaws.com/dev/getProof', bodyData, { headers })
-      console.log(proofResponse);
       const proof = JSON.parse(proofResponse.data.body)
-      const transaction = await nftContract.whitelistMint(proof, value, options);  
-      await transaction.wait();
+      if(proof.length > 0){
+        const transaction = await nftContract.whitelistMint(proof, value, options);  
+        await transaction.wait();
+      }
+      else{
+        toast.warning('You are not whitelisted!', {
+          position: "top-right",
+          autoClose: 3000,
+          closeOnClick: true,
+          hideProgressBar: true,
+        });
+        return;
+      }
     }else{
       const pub_transaction = await nftContract.publicMint(value, options);
       await pub_transaction.wait();
